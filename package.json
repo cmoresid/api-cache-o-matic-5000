@@ -1,0 +1,71 @@
+{
+  "name": "api-cache-o-matic-5000",
+  "version": "0.0.1",
+  "description": "An API caching layer",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run tsc",
+    "clean": "rm -rf ./out",
+    "commit": "npx git-cz",
+    "lint": "npx tslint --project . -c ./tslint.json",
+    "test": "jest",
+    "watch": "nodemon --watch 'src/**/*' -e ts --exec ts-node ./src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmoresid/api-cache-o-matic-5000.git"
+  },
+  "author": "Connor Moreside",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmoresid/api-cache-o-matic-5000/issues"
+  },
+  "homepage": "https://github.com/cmoresid/api-cache-o-matic-5000#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "http-status-codes": "1.3.2",
+    "koa": "2.7.0",
+    "koa-body": "4.1.0",
+    "koa-helmet": "4.1.0",
+    "koa-pino-logger": "2.1.3",
+    "koa-router": "7.4.0",
+    "pino": "5.11.1",
+    "ramda": "0.26.1",
+    "redis": "2.8.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "7.5.2",
+    "@commitlint/config-conventional": "7.5.0",
+    "@types/koa": "2.0.48",
+    "@types/koa-helmet": "3.1.2",
+    "@types/koa-pino-logger": "2.1.4",
+    "@types/koa-router": "7.0.40",
+    "@types/pino": "5.8.5",
+    "@types/ramda": "0.26.3",
+    "commitizen": "3.0.7",
+    "husky": "1.3.1",
+    "jest": "24.5.0",
+    "nodemon": "1.18.10",
+    "prettier": "1.16.4",
+    "pretty-quick": "1.10.0",
+    "ts-node": "8.0.3",
+    "tslint": "5.14.0",
+    "tslint-config-airbnb": "5.11.1",
+    "tslint-config-airbnb-base": "0.3.0",
+    "tslint-microsoft-contrib": "6.1.0",
+    "typescript": "3.3.3333"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": "8"
+  }
+}

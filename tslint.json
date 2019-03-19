@@ -1,0 +1,14 @@
+{
+  "extends": ["tslint-config-airbnb-base"],
+  "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
+  "rules": {
+    "no-unused-variable": false,
+    "ter-padded-blocks": [false],
+    "ter-arrow-parens": true,
+    "ter-indent": [false],
+    "ter-func-call-spacing": [false],
+    "no-floating-promises": true,
+    "semicolon": [true, "never"],
+    "quotemark": [true, "single", "avoid-escape"]
+  }
+}
